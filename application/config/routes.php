@@ -68,6 +68,14 @@ $route['api/manufacturer/update/(:num)']["post"] = 'api/manufacturers/updateManu
 $route['api/manufacturer/delete/(:num)']["delete"] = 'api/manufacturers/deleteManufacturer/$1';
 
 
+$route['api/vehicle/create'] = 'api/vehicles/createVehicle';
+$route['api/vehicles'] = 'api/vehicles/getVehicles';
+$route['api/vehicle/(:num)'] = 'api/vehicles/getVehicle/$1';
+$route['api/vehicle/update/(:num)']["post"] = 'api/vehicles/updateVehicle/$1';
+$route['api/vehicle/delete/(:num)']["delete"] = 'api/vehicles/deleteVehicle/$1';
+$route['api/vehicle/sell/(:num)']["get"] = 'api/vehicles/sellVehicle/$1';
+
+
 // Deleta an Article Routes
 # https://codeigniter.com/user_guide/general/routing.html#using-http-verbs-in-routes
 $route['api/article/(:num)/delete']["DELETE"] = 'api/articles/deleteArticle/$1';
